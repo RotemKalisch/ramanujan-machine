@@ -13,7 +13,7 @@ coef_t pow(coef_t a, size_t b) {
 } // namespace detail
 
 Polynomial::Polynomial(std::vector<coef_t> coefs) :
-    m_coefs(std::move(coefs)), m_degree(m_coefs.size()) {}
+    m_coefs(std::move(coefs)), m_degree(m_coefs.size()), m_curr(0) {}
 
 coef_t Polynomial::operator()(coef_t n) {
     coef_t res = 0;
@@ -22,5 +22,11 @@ coef_t Polynomial::operator()(coef_t n) {
     }
     return res;
 }
+
+coef_t Polynomial::operator()() {
+    return this->operator()(m_curr++);
+}
+
+void Polynomial::reset() { m_curr = 0; }
 
 } // namespace ramanujan

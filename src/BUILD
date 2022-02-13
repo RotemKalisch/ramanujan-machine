@@ -9,9 +9,14 @@ cc_library(
 
 cc_library(
     name = "continued_fraction",
-    srcs = ["continued_fraction.cc"],
     hdrs = ["continued_fraction.h"],
     deps = ["//src:polynomial"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "generator",
+    hdrs = ["generator.h"],
     visibility = ["//visibility:public"],
 )
 
@@ -19,6 +24,7 @@ cc_library(
     name = "polynomial",
     srcs = ["polynomial.cc"],
     hdrs = ["polynomial.h"],
+    deps = ["//src:generator"],
     visibility = ["//visibility:public"],
 )
 

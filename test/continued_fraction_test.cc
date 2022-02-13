@@ -8,7 +8,7 @@ namespace ramanujan {
 
 static constexpr double epsilon = 0.0001;
 
-TEST(ContinuedFraction, ones) {
+TEST(ContinuedFraction, one) {
     Polynomial one(std::vector<coef_t>{1});
     ContinuedFraction cf(one, one);
     EXPECT_TRUE(compare(1.0, cf(0), epsilon)) << cf(0);
