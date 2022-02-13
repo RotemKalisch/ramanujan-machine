@@ -8,6 +8,13 @@ cc_library(
 )
 
 cc_library(
+    name = "polynomial",
+    srcs = ["polynomial.cc"],
+    hdrs = ["polynomial.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "mobius",
     srcs = ["mobius.cc"],
     hdrs = ["mobius.h"],

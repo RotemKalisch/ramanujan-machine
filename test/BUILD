@@ -10,3 +10,13 @@ cc_test(
     ],
     visibility = ["//visibility:private"],
 )
+
+cc_test(
+    name = "polynomial_test",
+    srcs = ["polynomial_test.cc"],
+    deps = [
+        "//src:polynomial",
+        "@com_google_googletest//:gtest_main",
+    ],
+    visibility = ["//visibility:private"],
+)
