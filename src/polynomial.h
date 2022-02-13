@@ -16,6 +16,7 @@ public:
     coef_t operator()(coef_t);
     coef_t operator()();
     void reset();
+    std::string to_string() const;
 
 private:
     std::vector<coef_t> m_coefs;

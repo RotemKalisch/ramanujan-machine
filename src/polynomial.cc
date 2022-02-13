@@ -1,6 +1,7 @@
 #include "src/polynomial.h"
 
 #include <math.h>
+#include <sstream>
 
 namespace ramanujan {
 
@@ -28,5 +29,17 @@ coef_t Polynomial::operator()() {
 }
 
 void Polynomial::reset() { m_curr = 0; }
+
+std::string Polynomial::to_string() const {
+    /*
+     * TODO - write a better representation.
+     * skipping it for now because it's not interesting.
+     */
+    std::stringstream ss;
+    for (size_t i = m_degree; i > 0; --i) {
+        ss << m_coefs[i] << "x^" << i << "+";
+    }
+    return ss.str();
+}
 
 } // namespace ramanujan
