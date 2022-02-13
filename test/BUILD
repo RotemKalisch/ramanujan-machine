@@ -13,6 +13,16 @@ cc_test(
 )
 
 cc_test(
+    name = "meet_test",
+    srcs = ["meet_test.cc"],
+    deps = [
+        "//src:meet",
+        "@com_google_googletest//:gtest_main",
+    ],
+    visibility = ["//visibility:private"],
+)
+
+cc_test(
     name = "mobius_test",
     srcs = ["mobius_test.cc"],
     deps = [

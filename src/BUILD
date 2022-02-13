@@ -29,6 +29,13 @@ cc_library(
 )
 
 cc_library(
+    name = "meet",
+    srcs = ["meet.cc"],
+    hdrs = ["meet.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "mobius",
     srcs = ["mobius.cc"],
     hdrs = ["mobius.h"],
