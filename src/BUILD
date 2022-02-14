@@ -21,6 +21,19 @@ cc_library(
 )
 
 cc_library(
+    name = "lhs_enumerator",
+    srcs = ["lhs_enumerator.cc"],
+    hdrs = ["lhs_enumerator.h"],
+    deps = [
+        "//src:generator",
+        "//src:meet",
+        "//src:mobius",
+        "//src:utils",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "polynomial",
     srcs = ["polynomial.cc"],
     hdrs = ["polynomial.h"],
