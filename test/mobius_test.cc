@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "src/compare.h"
-#include "src/mobius.h"
+#include "src/lhs/mobius.h"
 
 namespace ramanujan {
 

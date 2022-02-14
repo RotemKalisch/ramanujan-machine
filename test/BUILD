@@ -27,7 +27,7 @@ cc_test(
     srcs = ["mobius_test.cc"],
     deps = [
         "//src:compare",
-        "//src:mobius",
+        "//src/lhs:mobius",
         "@com_google_googletest//:gtest_main",
     ],
     visibility = ["//visibility:private"],

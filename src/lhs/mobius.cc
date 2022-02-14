@@ -1,4 +1,4 @@
-#include "src/mobius.h"
+#include "src/lhs/mobius.h"
 
 namespace ramanujan {
 

@@ -1,8 +1,8 @@
-#include "src/lhs_enumerator.h"
+#include "src/lhs/lhs_enumerator.h"
 
 #include <numeric>
 
-#include "src/mobius.h"
+#include "src/lhs/mobius.h"
 
 namespace ramanujan {
 
