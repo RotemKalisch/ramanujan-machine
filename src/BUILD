@@ -24,7 +24,10 @@ cc_library(
     name = "polynomial",
     srcs = ["polynomial.cc"],
     hdrs = ["polynomial.h"],
-    deps = ["//src:generator"],
+    deps = [
+        "//src:generator",
+        "//src:utils",
+    ],
     visibility = ["//visibility:public"],
 )
 
@@ -39,5 +42,11 @@ cc_library(
     name = "mobius",
     srcs = ["mobius.cc"],
     hdrs = ["mobius.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "utils",
+    hdrs = ["utils.h"],
     visibility = ["//visibility:public"],
 )

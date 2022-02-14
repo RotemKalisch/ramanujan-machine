@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 
+#include <sstream>
+
 #include "src/polynomial.h"
 
 namespace ramanujan {
@@ -17,6 +19,15 @@ TEST(Polynomial, basic) {
     EXPECT_EQ(3, p(0));
     EXPECT_EQ(-1, p(1));
     EXPECT_EQ(5, p(2));
+}
+
+TEST(Polynomial, print) {
+    // 3 -5*x - x^2 + 2*x^3
+    Polynomial p(std::vector<coef_t>{3, -5, -1, 2});
+    std::string expected = "Polynomial{3, -5, -1, 2}";
+    std::stringstream ss;
+    ss << p;
+    EXPECT_EQ(expected, ss.str());
 }
 
 } // namespace ramanujan
