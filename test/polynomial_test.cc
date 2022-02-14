@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-#include "src/polynomial.h"
+#include "src/rhs/polynomial.h"
 
 namespace ramanujan {
 

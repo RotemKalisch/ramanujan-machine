@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 
 #include "src/compare.h"
-#include "src/continued_fraction.h"
-#include "src/polynomial.h"
+#include "src/rhs/continued_fraction.h"
+#include "src/rhs/polynomial.h"
 
 namespace ramanujan {
 

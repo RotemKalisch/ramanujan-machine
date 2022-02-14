@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-#include "src/generator.h"
+#include "src/rhs/generator.h"
 
 namespace ramanujan {
 

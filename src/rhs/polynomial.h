@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <vector>
 
-#include "src/generator.h"
+#include "src/rhs/generator.h"
 
 namespace ramanujan {
 

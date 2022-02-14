@@ -5,8 +5,8 @@ cc_test(
     srcs = ["continued_fraction_test.cc"],
     deps = [
         "//src:compare",
-        "//src:polynomial",
-        "//src:continued_fraction",
+        "//src/rhs:polynomial",
+        "//src/rhs:continued_fraction",
         "@com_google_googletest//:gtest_main",
     ],
     visibility = ["//visibility:private"],
@@ -37,7 +37,7 @@ cc_test(
     name = "polynomial_test",
     srcs = ["polynomial_test.cc"],
     deps = [
-        "//src:polynomial",
+        "//src/rhs:polynomial",
         "@com_google_googletest//:gtest_main",
     ],
     visibility = ["//visibility:private"],

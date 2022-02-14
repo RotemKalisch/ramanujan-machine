@@ -8,30 +8,6 @@ cc_library(
 )
 
 cc_library(
-    name = "continued_fraction",
-    hdrs = ["continued_fraction.h"],
-    deps = ["//src:polynomial"],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "generator",
-    hdrs = ["generator.h"],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "polynomial",
-    srcs = ["polynomial.cc"],
-    hdrs = ["polynomial.h"],
-    deps = [
-        "//src:generator",
-        "//src:utils",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
     name = "meet_map",
     srcs = ["meet_map.cc"],
     hdrs = ["meet_map.h"],

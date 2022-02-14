@@ -1,4 +1,4 @@
-#include "src/polynomial.h"
+#include "src/rhs/polynomial.h"
 
 #include <math.h>
 #include <sstream>
