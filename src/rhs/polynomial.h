@@ -4,13 +4,13 @@
 #include <cstdint>
 #include <vector>
 
-#include "src/rhs/generator.h"
+#include "src/rhs/number_generator.h"
 
 namespace ramanujan {
 
 using coef_t = int32_t;
 
-class Polynomial : public Generator {
+class Polynomial : public NumberGenerator {
 public:
     explicit Polynomial(std::vector<coef_t> coefs);
     virtual ~Polynomial();

@@ -8,9 +8,9 @@ cc_library(
 )
 
 cc_library(
-    name = "generator",
-    srcs = ["generator.cc"],
-    hdrs = ["generator.h"],
+    name = "number_generator",
+    srcs = ["number_generator.cc"],
+    hdrs = ["number_generator.h"],
     visibility = ["//visibility:public"],
 )
 
@@ -19,7 +19,7 @@ cc_library(
     srcs = ["polynomial.cc"],
     hdrs = ["polynomial.h"],
     deps = [
-        ":generator",
+        ":number_generator",
         "//src:utils",
     ],
     visibility = ["//visibility:public"],

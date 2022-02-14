@@ -2,12 +2,12 @@
 
 #include <algorithm>
 
-#include "src/rhs/generator.h"
+#include "src/rhs/number_generator.h"
 
 namespace ramanujan {
 
 double calculate_continued_fraction(
-    const Generator& a, const Generator& b, size_t depth
+    const NumberGenerator& a, const NumberGenerator& b, size_t depth
 ) {
     a.reset();
     b.reset();

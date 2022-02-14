@@ -7,9 +7,9 @@ using coef_t = int32_t;
 
 namespace ramanujan {
 
-class Generator {
+class NumberGenerator {
 public:
-    virtual ~Generator() = 0;
+    virtual ~NumberGenerator() = 0;
     virtual void reset() const = 0;
     virtual coef_t operator()() const = 0;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "src/rhs/generator.h"
+#include "src/rhs/number_generator.h"
 #include "src/meet_map.h"
 
 namespace ramanujan {

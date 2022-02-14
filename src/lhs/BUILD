@@ -5,7 +5,7 @@ cc_library(
     srcs = ["lhs_enumerator.cc"],
     hdrs = ["lhs_enumerator.h"],
     deps = [
-        "//src/rhs:generator",
+        "//src/rhs:number_generator",
         "//src:meet_map",
         ":mobius",
         "//src:utils",
