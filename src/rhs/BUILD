@@ -9,6 +9,7 @@ cc_library(
 
 cc_library(
     name = "generator",
+    srcs = ["generator.cc"],
     hdrs = ["generator.h"],
     visibility = ["//visibility:public"],
 )

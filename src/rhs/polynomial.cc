@@ -18,6 +18,8 @@ coef_t pow(coef_t a, size_t b) {
 Polynomial::Polynomial(std::vector<coef_t> coefs) :
     m_coefs(std::move(coefs)), m_degree(m_coefs.size()), m_curr(0) {}
 
+Polynomial::~Polynomial() {}
+
 coef_t Polynomial::operator()(coef_t n) const {
     coef_t res = 0;
     for (size_t i = 0; i < m_degree; ++i) {

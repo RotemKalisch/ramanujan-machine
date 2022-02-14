@@ -6,8 +6,9 @@
 
 namespace ramanujan {
 
-template <Generator A, Generator B>
-double calculate_continued_fraction(const A& a, const B& b, size_t depth) {
+double calculate_continued_fraction(
+    const Generator& a, const Generator& b, size_t depth
+) {
     a.reset();
     b.reset();
     double result = 0;

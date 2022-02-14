@@ -7,11 +7,11 @@ using coef_t = int32_t;
 
 namespace ramanujan {
 
-template <class T>
-concept Generator = requires(T a) {
-    { a() } -> std::same_as<coef_t>;
-    { a.reset() } -> std::same_as<void>;
-    { std::cout << a } -> std::same_as<std::ostream&>;
+class Generator {
+public:
+    virtual ~Generator() = 0;
+    virtual void reset() const = 0;
+    virtual coef_t operator()() const = 0;
 };
 
 } // namespace ramanujan

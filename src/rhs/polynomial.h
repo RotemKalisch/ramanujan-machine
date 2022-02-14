@@ -10,12 +10,13 @@ namespace ramanujan {
 
 using coef_t = int32_t;
 
-class Polynomial {
+class Polynomial : public Generator {
 public:
     explicit Polynomial(std::vector<coef_t> coefs);
+    virtual ~Polynomial();
     coef_t operator()(coef_t n) const;
-    coef_t operator()() const;
-    void reset() const;
+    virtual coef_t operator()() const override;
+    virtual void reset() const override;
     friend std::ostream& operator<<(std::ostream&, const Polynomial&);
 
 private:
