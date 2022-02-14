@@ -18,7 +18,7 @@ coef_t pow(coef_t a, size_t b) {
 Polynomial::Polynomial(std::vector<coef_t> coefs) :
     m_coefs(std::move(coefs)), m_degree(m_coefs.size()), m_curr(0) {}
 
-coef_t Polynomial::operator()(coef_t n) {
+coef_t Polynomial::operator()(coef_t n) const {
     coef_t res = 0;
     for (size_t i = 0; i < m_degree; ++i) {
         res += m_coefs[i] * detail::pow(n, i);
@@ -26,11 +26,11 @@ coef_t Polynomial::operator()(coef_t n) {
     return res;
 }
 
-coef_t Polynomial::operator()() {
+coef_t Polynomial::operator()() const {
     return this->operator()(m_curr++);
 }
 
-void Polynomial::reset() { m_curr = 0; }
+void Polynomial::reset() const { m_curr = 0; }
 
 std::ostream& operator<<(std::ostream& os, const Polynomial& p) {
     /*
