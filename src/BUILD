@@ -26,7 +26,7 @@ cc_library(
     hdrs = ["lhs_enumerator.h"],
     deps = [
         "//src:generator",
-        "//src:meet",
+        "//src:meet_map",
         "//src:mobius",
         "//src:utils",
     ],
@@ -45,9 +45,9 @@ cc_library(
 )
 
 cc_library(
-    name = "meet",
-    srcs = ["meet.cc"],
-    hdrs = ["meet.h"],
+    name = "meet_map",
+    srcs = ["meet_map.cc"],
+    hdrs = ["meet_map.h"],
     visibility = ["//visibility:public"],
 )
 

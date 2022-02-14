@@ -1,7 +1,7 @@
 #pragma once
 
 #include "src/generator.h"
-#include "src/meet.h"
+#include "src/meet_map.h"
 
 namespace ramanujan {
 
