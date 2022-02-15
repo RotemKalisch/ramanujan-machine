@@ -1,10 +1,17 @@
 #include "src/lhs/enumerator.h"
 
+#include <cmath>
 #include <numeric>
 
 #include "src/lhs/mobius.h"
 
 namespace ramanujan::lhs {
+
+void insert(MeetMap& meet_map, double value, std::string str) {
+    if(std::isfinite(value)) {
+        meet_map[value] = std::move(str);
+    }
+}
 
 void enumerate(
     MeetMap& meet_map,
@@ -32,13 +39,24 @@ void enumerate(
                          */
                         continue;
                     }
-                    double numerator = calculate_mobius(a, b, c, d, const_pair.first, 1);
-                    double denominator = calculate_mobius(a, b, c, d, 1, const_pair.first);
-                    double both = calculate_mobius(a, b, c, d, const_pair.first, const_pair.first);
-                    // TODO validate not in there
-                    meet_map[numerator] = print_mobius(a, b, c, d, const_pair.second, 1);
-                    meet_map[denominator] = print_mobius(a, b, c, d, 1, const_pair.second);
-                    meet_map[both] = print_mobius(a, b, c, d, const_pair.second, const_pair.second);
+                    insert(
+                        meet_map,
+                        calculate_mobius(a, b, c, d, const_pair.first, 1),
+                        print_mobius(a, b, c, d, const_pair.second, 1)
+                    );
+                    insert(
+                        meet_map,
+                        calculate_mobius(a, b, c, d, 1, const_pair.first),
+                        print_mobius(a, b, c, d, 1, const_pair.second)
+                    );
+                    // Since here x = y, we don't want things such as (1+x)/(1+x)
+                    if (!(a == b && c == d)) {
+                        insert(
+                            meet_map,
+                            calculate_mobius(a, b, c, d, const_pair.first, const_pair.first),
+                            print_mobius(a, b, c, d, const_pair.second, const_pair.second)
+                        );
+                    }
                 }
             }
         }
