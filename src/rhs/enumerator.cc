@@ -1,4 +1,4 @@
-#include "src/rhs/rhs_enumerator.h"
+#include "src/rhs/enumerator.h"
 
 #include <iostream>
 

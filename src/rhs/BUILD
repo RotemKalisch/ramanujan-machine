@@ -27,9 +27,9 @@ cc_library(
 )
 
 cc_library(
-    name = "rhs_enumerator",
-    srcs = ["rhs_enumerator.cc"],
-    hdrs = ["rhs_enumerator.h"],
+    name = "enumerator",
+    srcs = ["enumerator.cc"],
+    hdrs = ["enumerator.h"],
     deps = [
         ":number_generator",
         ":continued_fraction",
