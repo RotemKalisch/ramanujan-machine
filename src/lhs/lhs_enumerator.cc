@@ -23,9 +23,11 @@ void LHSEnumerator::generate(MeetMap& meet_map, double constant, const std::stri
                     }
                     double numerator = calculate_mobius(a, b, c, d, constant, 1);
                     double denominator = calculate_mobius(a, b, c, d, 1, constant);
+                    double both = calculate_mobius(a, b, c, d, constant, constant);
                     // TODO validate not in there
                     meet_map[numerator] = print_mobius(a, b, c, d, constant_name, 1);
-                    meet_map[denominator] = print_mobius(a, b, c, d, 1, constant);
+                    meet_map[denominator] = print_mobius(a, b, c, d, 1, constant_name);
+                    meet_map[both] = print_mobius(a, b, c, d, constant_name, constant_name);
                 }
             }
         }
