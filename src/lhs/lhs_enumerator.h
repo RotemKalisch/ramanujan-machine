@@ -7,8 +7,8 @@ namespace ramanujan {
 
 class LHSEnumerator {
 public:
-    LHSEnumerator(MeetMap& meet_map, coef_t threshold);
-    void generate(double constant, const std::string& constant_name);
+    LHSEnumerator(MeetMap& meet_map);
+    void generate(double constant, const std::string& constant_name, coef_t threshold);
 
 private:
     MeetMap& m_meet_map;
