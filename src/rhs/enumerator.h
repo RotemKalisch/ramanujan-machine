@@ -8,12 +8,12 @@
 
 namespace ramanujan::rhs {
 
-using number_generators_t = std::vector<std::unique_ptr<NumberGenerator>>;
+using number_generator_t = std::unique_ptr<NumberGenerator>;
 
 void enumerate(
     MeetMap& meet_map,
-    const number_generators_t& a_gens,
-    const number_generators_t& b_gens,
+    const std::vector<number_generator_t>& a_gens,
+    const std::vector<number_generator_t>& b_gens,
     size_t depth
 );
 
