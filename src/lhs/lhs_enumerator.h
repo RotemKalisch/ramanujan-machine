@@ -7,10 +7,11 @@ namespace ramanujan {
 
 class LHSEnumerator {
 public:
-    LHSEnumerator(coef_t threshold);
-    void generate(MeetMap& meet_map, double constant, const std::string& constant_name) const;
+    LHSEnumerator(MeetMap& meet_map, coef_t threshold);
+    void generate(double constant, const std::string& constant_name);
 
 private:
+    MeetMap& m_meet_map;
     coef_t m_threshold;
 };
 
