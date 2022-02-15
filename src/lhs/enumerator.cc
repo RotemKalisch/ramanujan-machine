@@ -50,7 +50,7 @@ void enumerate(
                         print_mobius(a, b, c, d, 1, const_pair.second)
                     );
                     // Since here x = y, we don't want things such as (1+x)/(1+x)
-                    if (!(a == b && c == d)) {
+                    if (!(a == c && b == d)) {
                         insert(
                             meet_map,
                             calculate_mobius(a, b, c, d, const_pair.first, const_pair.first),
