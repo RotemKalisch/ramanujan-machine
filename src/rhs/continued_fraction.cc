@@ -28,16 +28,21 @@ std::optional<double> calculate_continued_fraction(
     }
     double result = 0;
     double old_result = 0;
+    size_t oscillations = 0;
     double diff = std::numeric_limits<double>::max();
     for (size_t i = depth; i > 0; --i) {
         old_result = result;
         result = b_results[i] / (a_results[i] + old_result);
         if (result - old_result > diff) {
-            return std::nullopt;
+            ++oscillations;
         }
         diff = result - old_result;
     }
     result += a_results[0];
+    if (oscillations > depth / 10) { 
+        // TODO make the oscillation detector smarter
+        return std::nullopt;
+    }
     return result;
 }
 
