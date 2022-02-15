@@ -17,7 +17,7 @@ public:
     coef_t operator()(coef_t n) const;
     virtual coef_t operator()() const override;
     virtual void reset() const override;
-    friend std::ostream& operator<<(std::ostream&, const Polynomial&);
+    virtual std::string print() const override;
 
 private:
     std::vector<coef_t> m_coefs;

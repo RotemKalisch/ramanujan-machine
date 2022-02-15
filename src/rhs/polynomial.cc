@@ -34,13 +34,14 @@ coef_t Polynomial::operator()() const {
 
 void Polynomial::reset() const { m_curr = 0; }
 
-std::ostream& operator<<(std::ostream& os, const Polynomial& p) {
+std::string Polynomial::print() const {
     /*
      * TODO - write a better representation.
      * skipping it for now because it's not interesting.
      */
-    os << "Polynomial" << p.m_coefs;
-    return os;
+    std::stringstream ss;
+    ss << "Polynomial" << m_coefs;
+    return ss.str();
 }
 
 } // namespace ramanujan
