@@ -25,3 +25,15 @@ cc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "rhs_enumerator",
+    srcs = ["rhs_enumerator.cc"],
+    hdrs = ["rhs_enumerator.h"],
+    deps = [
+        ":number_generator",
+        ":continued_fraction",
+        "//src:meet_map",
+    ],
+    visibility = ["//visibility:public"],
+)
