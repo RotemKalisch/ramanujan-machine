@@ -44,11 +44,14 @@ void enumerate(
                         calculate_mobius(a, b, c, d, const_pair.first, 1),
                         print_mobius(a, b, c, d, const_pair.second, 1)
                     );
-                    insert(
-                        meet_map,
-                        calculate_mobius(a, b, c, d, 1, const_pair.first),
-                        print_mobius(a, b, c, d, 1, const_pair.second)
-                    );
+                    // We want to avoid cases of 0 numerator
+                    if (a + b != 0) {
+                        insert(
+                            meet_map,
+                            calculate_mobius(a, b, c, d, 1, const_pair.first),
+                            print_mobius(a, b, c, d, 1, const_pair.second)
+                        );
+                    }
                     // Since here x = y, we don't want things such as (1+x)/(1+x)
                     if (!(a == c && b == d)) {
                         insert(
