@@ -1,9 +1,9 @@
 load("@rules_cc//cc:defs.bzl", "cc_library") 
 
 cc_library(
-    name = "lhs_enumerator",
-    srcs = ["lhs_enumerator.cc"],
-    hdrs = ["lhs_enumerator.h"],
+    name = "enumerator",
+    srcs = ["enumerator.cc"],
+    hdrs = ["enumerator.h"],
     deps = [
         "//src/rhs:number_generator",
         "//src:meet_map",

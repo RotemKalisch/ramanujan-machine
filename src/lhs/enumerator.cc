@@ -1,4 +1,4 @@
-#include "src/lhs/lhs_enumerator.h"
+#include "src/lhs/enumerator.h"
 
 #include <numeric>
 
