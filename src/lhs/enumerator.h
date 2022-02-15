@@ -11,7 +11,7 @@ namespace ramanujan::lhs {
 
 using const_t = std::pair<double, std::string_view>;
 
-static const std::vector<const_t> consts = {
+static const std::vector<const_t> const_pairs = {
     std::pair(std::numbers::pi, "pi"),
     std::pair(std::numbers::e, "e"),
     std::pair(std::numbers::log2e, "log2"),
@@ -20,11 +20,16 @@ static const std::vector<const_t> consts = {
     std::pair(std::numbers::sqrt3, "sqrt3")
 };
 
+void enumerate(
+    MeetMap& meet_map,
+    int32_t threshold,
+    const std::vector<const_t>& const_pairs
+);
 
 void enumerate(
     MeetMap& meet_map,
-    const const_t& constant,
-    int32_t threshold
+    int32_t threshold,
+    const const_t& const_pair
 );
 
 } // namespace ramanujan::lhs
