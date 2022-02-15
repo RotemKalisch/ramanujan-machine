@@ -2,8 +2,17 @@
 
 #include <algorithm>
 #include <vector>
+#include <sstream>
 
 namespace ramanujan::rhs {
+
+std::string print_continued_fraction(
+    const NumberGenerator& a, const NumberGenerator& b
+) {
+    std::stringstream ss;
+    ss << "ContinuedFraction(" << a << ", " << b << ")";
+    return ss.str();
+}
 
 double calculate_continued_fraction(
     const NumberGenerator& a, const NumberGenerator& b, size_t depth
