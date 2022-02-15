@@ -4,7 +4,7 @@
 
 #include "src/rhs/number_generator.h"
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 double calculate_continued_fraction(
     const NumberGenerator& a, const NumberGenerator& b, size_t depth
@@ -26,4 +26,4 @@ double calculate_continued_fraction(
     return result;
 }
 
-} // namespace ramanujan
+} // namespace ramanujan::rhs

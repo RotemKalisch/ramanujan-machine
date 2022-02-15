@@ -1,6 +1,6 @@
 #include "src/rhs/number_generator.h"
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 NumberGenerator::~NumberGenerator() {};
 
@@ -9,4 +9,4 @@ std::ostream& operator<<(std::ostream& os, const NumberGenerator& ng) {
     return os;
 }
 
-} // namespace ramanujan
+} // namespace ramanujan::rhs

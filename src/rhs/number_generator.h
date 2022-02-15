@@ -5,7 +5,7 @@
 
 using coef_t = int32_t;
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 class NumberGenerator {
 public:
@@ -16,4 +16,4 @@ public:
     friend std::ostream& operator<<(std::ostream&, const NumberGenerator&);
 };
 
-} // namespace ramanujan
+} // namespace ramanujan::rhs

@@ -5,7 +5,7 @@
 
 #include "src/utils.h"
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 namespace detail {
 
@@ -44,4 +44,4 @@ std::string Polynomial::print() const {
     return ss.str();
 }
 
-} // namespace ramanujan
+} // namespace ramanujan::rhs

@@ -6,7 +6,7 @@
 
 #include "src/rhs/number_generator.h"
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 using coef_t = int32_t;
 
@@ -25,4 +25,4 @@ private:
     mutable size_t m_curr;
 };
 
-} // namespace ramanujan
+} // namespace ramanujan::rhs
