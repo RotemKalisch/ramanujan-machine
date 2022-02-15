@@ -44,4 +44,8 @@ std::string Polynomial::print() const {
     return ss.str();
 }
 
+number_generator_t make_polynomial(std::vector<coef_t> coefs) {
+    return std::make_unique<Polynomial>(std::move(coefs));
+}
+
 } // namespace ramanujan::rhs

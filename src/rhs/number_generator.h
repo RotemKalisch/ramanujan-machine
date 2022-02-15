@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <memory>
 #include <string>
 
 using coef_t = int32_t;
@@ -15,5 +16,7 @@ public:
     virtual std::string print() const = 0;
     friend std::ostream& operator<<(std::ostream&, const NumberGenerator&);
 };
+
+using number_generator_t = std::unique_ptr<NumberGenerator>;
 
 } // namespace ramanujan::rhs

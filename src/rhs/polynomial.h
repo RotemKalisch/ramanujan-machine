@@ -25,4 +25,6 @@ private:
     mutable size_t m_curr;
 };
 
+number_generator_t make_polynomial(std::vector<coef_t> coefs);
+
 } // namespace ramanujan::rhs

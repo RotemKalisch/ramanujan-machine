@@ -1,14 +1,11 @@
 #pragma once
 
-#include <memory>
 #include <vector>
 
 #include "src/meet_map.h"
 #include "src/rhs/number_generator.h"
 
 namespace ramanujan::rhs {
-
-using number_generator_t = std::unique_ptr<NumberGenerator>;
 
 void enumerate(
     MeetMap& meet_map,
