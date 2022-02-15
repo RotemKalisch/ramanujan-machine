@@ -2,6 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
     name = "continued_fraction",
+    srcs = ["continued_fraction.cc"],
     hdrs = ["continued_fraction.h"],
     deps = [":polynomial"],
     visibility = ["//visibility:public"],
