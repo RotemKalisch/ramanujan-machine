@@ -4,7 +4,7 @@
 
 #include "src/lhs/mobius.h"
 
-namespace ramanujan {
+namespace ramanujan::lhs {
 
 LHSEnumerator::LHSEnumerator(MeetMap& meet_map) :
     m_meet_map(meet_map) {}
@@ -35,4 +35,4 @@ void LHSEnumerator::generate(double constant, const std::string& constant_name, 
     }
 }
 
-} // namespace ramanujan
+} // namespace ramanujan::lhs
