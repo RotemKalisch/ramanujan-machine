@@ -25,9 +25,7 @@ TEST(Polynomial, print) {
     // 3 -5*x - x^2 + 2*x^3
     Polynomial p(std::vector<coef_t>{3, -5, -1, 2});
     std::string expected = "Polynomial{3, -5, -1, 2}";
-    std::stringstream ss;
-    ss << p;
-    EXPECT_EQ(expected, ss.str());
+    EXPECT_EQ(expected, p.print());
 }
 
 } // namespace ramanujan
