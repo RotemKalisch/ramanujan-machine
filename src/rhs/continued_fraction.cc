@@ -1,6 +1,7 @@
 #include "src/rhs/continued_fraction.h"
 
 #include <algorithm>
+#include <cmath>
 #include <vector>
 #include <sstream>
 
@@ -14,7 +15,7 @@ std::string print_continued_fraction(
     return ss.str();
 }
 
-std::optional<double> calculate_continued_fraction(
+double calculate_continued_fraction(
     const NumberGenerator& a, const NumberGenerator& b, size_t depth
 ) {
     a.reset();
@@ -27,22 +28,10 @@ std::optional<double> calculate_continued_fraction(
         b_results.push_back(b());
     }
     double result = 0;
-    double old_result = 0;
-    size_t oscillations = 0;
-    double diff = std::numeric_limits<double>::max();
     for (size_t i = depth; i > 0; --i) {
-        old_result = result;
-        result = b_results[i] / (a_results[i] + old_result);
-        if (result - old_result > diff) {
-            ++oscillations;
-        }
-        diff = result - old_result;
+        result = b_results[i] / (a_results[i] + result);
     }
     result += a_results[0];
-    if (oscillations > depth / 10) { 
-        // TODO make the oscillation detector smarter
-        return std::nullopt;
-    }
     return result;
 }
 
