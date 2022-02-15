@@ -10,12 +10,12 @@ void enumerate(
     MeetMap& meet_map,
     double constant,
     const std::string& constant_name,
-    coef_t threshold
+    int32_t threshold
 ) { 
-    for (coef_t a = 0; a < threshold; ++a) {
-        for (coef_t b = -threshold; b < threshold; ++b) {
-            for (coef_t c = 0; c < threshold; ++c) {
-                for (coef_t d = -threshold; d < threshold; ++d) {
+    for (int32_t a = 0; a < threshold; ++a) {
+        for (int32_t b = -threshold; b < threshold; ++b) {
+            for (int32_t c = 0; c < threshold; ++c) {
+                for (int32_t d = -threshold; d < threshold; ++d) {
                     if(std::gcd(a, b) != 1 || std::gcd(c, d) != 1) {
                         /*
                          * We don't want values such as 2pi + 2,
