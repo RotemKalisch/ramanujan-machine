@@ -21,15 +21,14 @@ void enumerate(
     int32_t threshold,
     const const_t& const_pair
 ) { 
-    for (int32_t a = 0; a < threshold; ++a) {
+    for (int32_t a = 1; a < threshold; ++a) {
         for (int32_t b = -threshold; b < threshold; ++b) {
-            for (int32_t c = 0; c < threshold; ++c) {
+            for (int32_t c = 1; c < threshold; ++c) {
                 for (int32_t d = -threshold; d < threshold; ++d) {
-                    if(std::gcd(a, b) != 1 || std::gcd(c, d) != 1) {
+                    if (std::gcd(a, b) != 1 || std::gcd(c, d) != 1) {
                         /*
                          * We don't want values such as 2pi + 2,
                          * as we already have pi + 1!
-                         * We also catch here zero cases.
                          */
                         continue;
                     }

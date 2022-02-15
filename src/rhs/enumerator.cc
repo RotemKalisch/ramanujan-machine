@@ -17,7 +17,8 @@ void enumerate(
             double value = calculate_continued_fraction(*a_gen, *b_gen, depth);
             if (meet_map.contains(value)) {
                 std::cout << meet_map[value] << " = "
-                    << print_continued_fraction(*a_gen, *b_gen) << std::endl;
+                    << print_continued_fraction(*a_gen, *b_gen) << " = "
+                    << value << std::endl;
             }
         }
     }

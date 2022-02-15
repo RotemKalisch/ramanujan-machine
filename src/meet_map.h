@@ -13,7 +13,7 @@ using key_t = int64_t;
  */
 class MeetMap {
 public:
-    static constexpr int8_t RESOLUTION_BITS = 32;
+    static constexpr int8_t RESOLUTION_BITS = 20;
     static constexpr key_t RESOLUTION = 1UL << RESOLUTION_BITS;
     bool contains(double key) const;
     std::string& operator[](double key);
