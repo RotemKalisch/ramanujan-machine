@@ -4,7 +4,7 @@
 #include "src/rhs/continued_fraction.h"
 #include "src/rhs/polynomial.h"
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 static constexpr double epsilon = 0.0001;
 

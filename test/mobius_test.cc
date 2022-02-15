@@ -3,7 +3,7 @@
 #include "src/compare.h"
 #include "src/lhs/mobius.h"
 
-namespace ramanujan {
+namespace ramanujan::lhs {
 
 TEST(mobius, identity) {
     static constexpr double expected = 1.3275842395;

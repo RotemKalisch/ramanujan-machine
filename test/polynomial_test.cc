@@ -4,7 +4,7 @@
 
 #include "src/rhs/polynomial.h"
 
-namespace ramanujan {
+namespace ramanujan::rhs {
 
 TEST(Polynomial, zero) {
     Polynomial p(std::vector<coef_t>{});
