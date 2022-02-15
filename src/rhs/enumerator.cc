@@ -14,7 +14,9 @@ void enumerate(
 ) {
     for (const number_generator_t& a_gen : a_gens) {
         for (const number_generator_t& b_gen : b_gens) {
-            double value = calculate_continued_fraction(*a_gen, *b_gen, depth);
+            std::optional<double> value_opt = calculate_continued_fraction(*a_gen, *b_gen, depth);
+            if (!value_opt) { continue; }
+            double value = *value_opt;
             if (meet_map.contains(value)) {
                 std::cout << meet_map[value] << " = "
                     << print_continued_fraction(*a_gen, *b_gen) << " = "

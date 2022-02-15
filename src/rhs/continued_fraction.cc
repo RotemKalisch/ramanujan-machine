@@ -14,12 +14,11 @@ std::string print_continued_fraction(
     return ss.str();
 }
 
-double calculate_continued_fraction(
+std::optional<double> calculate_continued_fraction(
     const NumberGenerator& a, const NumberGenerator& b, size_t depth
 ) {
     a.reset();
     b.reset();
-    double result = 0;
     std::vector<coef_t> a_results, b_results;
     a_results.reserve(depth);
     b_results.reserve(depth);
@@ -27,8 +26,16 @@ double calculate_continued_fraction(
         a_results.push_back(a());
         b_results.push_back(b());
     }
+    double result = 0;
+    double old_result = 0;
+    double diff = std::numeric_limits<double>::max();
     for (size_t i = depth; i > 0; --i) {
-        result = b_results[i] / (a_results[i] + result);
+        old_result = result;
+        result = b_results[i] / (a_results[i] + old_result);
+        if (result - old_result > diff) {
+            return std::nullopt;
+        }
+        diff = result - old_result;
     }
     result += a_results[0];
     return result;
