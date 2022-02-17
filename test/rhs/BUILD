@@ -1,6 +1,18 @@
 load("@rules_cc//cc:defs.bzl", "cc_test")
 
 cc_test(
+    name = "enumerator_performance_test",
+    srcs = ["enumerator_performance_test.cc"],
+    deps = [
+        "//src:meet",
+        "//src:meet_map",
+        "//src/rhs:enumerator",
+        "@com_google_googletest//:gtest_main",
+    ],
+    visibility = ["//visibility:private"],
+)
+
+cc_test(
     name = "continued_fraction_test",
     srcs = ["continued_fraction_test.cc"],
     deps = [

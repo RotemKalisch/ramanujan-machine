@@ -28,7 +28,6 @@ cc_library(
 
 cc_library(
     name = "enumerator",
-    srcs = ["enumerator.cc"],
     hdrs = ["enumerator.h"],
     deps = [
         ":number_generator",

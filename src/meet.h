@@ -18,13 +18,15 @@ static const std::vector<lhs::const_t> const_pairs = {
     std::pair(std::numbers::sqrt3, "sqrt3")
 };
 
-std::vector<rhs::number_generator_t> create_generators();
+std::vector<rhs::number_generator_t> create_generators(int32_t threshold);
 
-void load(MeetMap& meet_map);
+void load(MeetMap& meet_map, int32_t threshold);
+
 void meet(
     MeetMap& meet_map,
     const std::vector<rhs::number_generator_t>& a_gens,
-    const std::vector<rhs::number_generator_t>& b_gens
+    const std::vector<rhs::number_generator_t>& b_gens,
+    size_t depth
 );
 
 } // namespace ramanujan

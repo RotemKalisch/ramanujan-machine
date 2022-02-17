@@ -15,20 +15,21 @@ std::vector<rhs::number_generator_t> create_linear_functions(int32_t threshold) 
     return results;
 }
  
-std::vector<rhs::number_generator_t> create_generators() {
-    return create_linear_functions(/*threshold=*/20);
+std::vector<rhs::number_generator_t> create_generators(int32_t threshold) {
+    return create_linear_functions(threshold);
 }
 
-void load(MeetMap& meet_map) {
-    lhs::enumerate<>(meet_map, /*threshold=*/10, const_pairs);
+void load(MeetMap& meet_map, int32_t threshold) {
+    lhs::enumerate<>(meet_map, threshold, const_pairs);
 }
 
 void meet(
     MeetMap& meet_map,
     const std::vector<rhs::number_generator_t>& a_gens,
-    const std::vector<rhs::number_generator_t>& b_gens
+    const std::vector<rhs::number_generator_t>& b_gens,
+    size_t depth
 ) {
-    rhs::enumerate(meet_map, a_gens, b_gens, /*depth=*/100);
+    rhs::enumerate<>(meet_map, a_gens, b_gens, depth);
 }
 
 } // namespace ramanujan
