@@ -6,7 +6,6 @@ cc_library(
     hdrs = ["enumerator.h"],
     deps = [
         ":mobius",
-        "//src:meet_map",
         "//src:utils",
     ],
     visibility = ["//visibility:public"],

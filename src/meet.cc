@@ -20,7 +20,7 @@ std::vector<rhs::number_generator_t> create_generators() {
 }
 
 void load(MeetMap& meet_map) {
-    lhs::enumerate(meet_map, /*threshold=*/10, const_pairs);
+    lhs::enumerate<>(meet_map, /*threshold=*/10, const_pairs);
 }
 
 void meet(
@@ -28,7 +28,7 @@ void meet(
     const std::vector<rhs::number_generator_t>& a_gens,
     const std::vector<rhs::number_generator_t>& b_gens
 ) {
-    enumerate(meet_map, a_gens, b_gens, /*depth=*/100);
+    rhs::enumerate(meet_map, a_gens, b_gens, /*depth=*/100);
 }
 
 } // namespace ramanujan
