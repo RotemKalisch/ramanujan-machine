@@ -10,9 +10,8 @@ It took me around 3 days to get to an initial working state.
 3. Receive parameters through commandline instead of them being hardcoded.
 4. Use a logger instead of printing to terminal (LOL).
 5. Figure out a way to distribute the algorithm.
-6. Performance testing and benchmarking
-7. Figure out a way to detect diverging fractions and stop calculating them in real time.
-8. Add more tests (I stopped writing them in the middle in order to get to a working state).
+6. Figure out a way to detect diverging fractions and stop calculating them in real time.
+7. Add more tests (I stopped writing them in the middle in order to get to a working state).
 
 ### Research
 1. Find a pattern in continued fractions - when are they diverging?
